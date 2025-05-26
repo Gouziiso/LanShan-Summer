@@ -1,1 +1,67 @@
 @import './reset.css';
+
+:root {
+  --er-color-white: #ffffff;
+  --er-color-black: #000000;
+    --color:(primary:#409eff,success:#67c23a,warning:#e6a23c,danger:#f56c6c,info:#909399);
+    --er-bg-color: #f5f7fa;
+    --er-bg-color-page: #f2f3f5;
+    --er-bg-color-overlay: #ffffff;
+    --er-text-color-primary: #606266;
+    --er-text-color-secondary: #909399;
+    --er-text-color-placeholder: #c0c4cc;
+    --er-text-color-disabled: #c0c4cc;
+    --er-text-color-regular: #409eff;
+    --er-border-color: #dcdfe6;
+    --er-border-color-light: #c0c4cc;
+    --er-border-color-dark: #909399;
+    --er-border-color-lighter: #dcdfe6;
+    --er-border-color-darker: #e4e7ed;
+    --er-border-color-extra-light: #f2f3f5;
+    --er-fill-color: #f5f7fa;
+    --er-fill-color-light: #f2f3f5;
+    --er-fill-color-dark: #e4e7ed;
+    --er-fill-color-lighter: #f5f7fa;
+    --er-fill-color-darker: #e4e7ed;
+    --er-fill-color-extra-light: #f2f3f5;
+    --er-fill-color-blank: #ffffff;
+
+    @each $val,$color in var(--color) {
+      --er-color-#{$val}: #{$color};
+      @for $i from 3 through 9 {
+        --er-color-$(val)-light-$(i):mix(#fff,$(color),0.$1))；
+    }
+    --er-color-$(val)-dark-2: mix(#000, $(color), 0.2);  
+}
+
+/* border */
+--er-border-width: 1px;
+--er-border-style: solid;
+--er-border-color-hover: var(--er-border-color-disable);
+--er-border: var(--er-border-width) var(--er-border-style) var(--er-border-color);
+--er-border-radius-base: 4px;
+--er-border-radius-small: 2px;
+--er-border-radius-round: 20px;
+--er-border-radius-circle: 100%;
+
+/* font  */
+---er-font-size-extra-large: 18px;
+---er-font-size-large: 18px;
+---er-font-size-medium: 16px;
+---er-font-size-base: 14px;
+---er-font-size-small: 13px;
+---er-font-size-extra-small: 12px;
+--er-font-family:'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+'Microsoft YaHei', '\5fea\8f6f\96c5\9ed1', Arial, sans-serif;
+--er-font-weight-primary: 500;
+
+/* disable */
+--er-disable-bg-color: var(--er-fill-color-light);
+--er-disable-text-color: var(--er-text-color-placeholder);
+--er-disable-border-color: var(--er-border-color-light);
+
+/* animation */
+--er-animation-duration: 0.4s;
+--er-transition-duration-fast: 0.2s;
+}
+
